@@ -4,11 +4,12 @@
 	<title></title>
 </head>
 <body>
-
-<!-- Delete this section when you reach this file -->
-<h1 style="font-size: 55px;position: absolute;left: 41.5%;top:28%">Cart Function</h1>
-<h1 style="font-size: 70px;position: absolute;left: 40%;bottom:50%">Coming Soon</h1>
-<!-- ------------------ -->
-
+	{% for c in carts %}
+		<div class="card">
+			<p><a href="{{url_for('addToCart',productID=c.id)}}"><button type="submit">PAY NOW</button></a></p>
+		</div>
+		
+	{% endfor %}
+	<a href="home/">
 </body>
 </html>
